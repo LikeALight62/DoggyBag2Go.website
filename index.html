@@ -1,52 +1,171 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>DoggyBag2Go - HFT Stuttgart</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DoggyBag2Go - Custom Webpage</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(45deg, blueviolet, red);
+    color: #fff;
+  }
+  header {
+    padding: 1rem;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header img {
+    height: 50px;
+    border-radius: 50%;
+  }
+  header nav a, header button {
+    color: white;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background: rgba(255,255,255,0.1);
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  header nav a:hover, header button:hover {
+    background: rgba(255,255,255,0.3);
+  }
+  .section {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .section-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  @media(min-width: 768px) {
+    .section-part {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+  .section-part img {
+    max-width: 300px;
+    border-radius: 1rem;
+    margin: 1rem;
+  }
+  .contact-btn {
+    background: #ff004c;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff004c;
+    margin-top: 1rem;
+  }
+  .contact-btn:hover {
+    background: #ff335c;
+  }
+
+  footer {
+    padding: 60px 20px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  .footer-info {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .footer-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .footer-info .bottom {
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+</style>
+<script>
+function contactWhatsApp() {
+  window.open('https://wa.me/0176......','_blank');
+}
+</script>
 </head>
 <body>
-
-  <header class="hero">
-    <img src="PHOTO-2025-06-25-10-44-23.jpg" alt="DoggyBag2Go Headerbild" class="hero-image">
-    <div class="hero-text">
-      <h1>DoggyBag2Go</h1>
-      <h2>Essensrettung an der HFT Stuttgart</h2>
-    </div>
+  <!-- HEADER -->
+  <header>
+    <img src="logo.png" alt="DoggyBag2Go Logo" />
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <button onclick="contactWhatsApp()">Contact</button>
+    </nav>
   </header>
 
-  <section class="info">
-    <h2>Was ist DoggyBag2Go?</h2>
-    <p>DoggyBag2Go ist deine Initiative gegen Lebensmittelverschwendung. Hol dir übrige, aber einwandfreie Speisen von der Mensa – günstig, nachhaltig und lecker.</p>
-    <ul>
-      <li>Leckeres Essen retten</li>
-      <li>Geld sparen</li>
-      <li>Nachhaltig handeln</li>
-      <li>Lokale Anbieter unterstützen</li>
-    </ul>
+  <!-- HOME SECTION -->
+  <section class="section" id="home">
+    <div class="section-part">
+      <div>
+        <h2>DoggyBag2Go - Essensrettung an der HFT Stuttgart</h2>
+        <p>Deine Initiative gegen Lebensmittelverschwendung. Hol dir übrig gebliebenes Essen nachhaltig, lecker und preiswert – mach mit und unterstütze die Umwelt!</p>
+        <button class="contact-btn" onclick="contactWhatsApp()">Contact</button>
+      </div>
+      <img src="PHOTO-2025-06-25-10-44-23.jpg" alt="DoggyBag2Go" />
+    </div>
   </section>
 
-  <section class="how-it-works">
-    <h2>So funktioniert's</h2>
-    <ol>
-      <li>Homepage öffnen</li>
-      <li>Angebot in deiner Nähe finden</li>
-      <li>Abholen & genießen</li>
-      <li>Gemeinsam Food Waste reduzieren</li>
-    </ol>
+  <!-- SERVICES SECTION -->
+  <section class="section" id="services">
+    <div class="section-part">
+      <img src="Logo2.png" alt="DoggyBag2Go Service" />
+      <div>
+        <h2>Was kannst du mit DoggyBag2Go erreichen?</h2>
+        <p>Mit DoggyBag2Go hilfst du, Essen zu retten, neue Leute kennenzulernen und gleichzeitig die Umwelt zu schützen. Werde ein Teil der Bewegung und unterstütze die Nachhaltigkeit an der HFT!</p>
+      </div>
+    </div>
   </section>
 
-  <section class="contact">
-    <h2>Mitmachen lohnt sich!</h2>
-    <p>Teste DoggyBag2Go an der HFT Stuttgart<br>Schellingstraße 24, 70174 Stuttgart</p>
-    <p>Fragen oder Feedback? <a href="mailto:42bahi1bdi@hft-stuttgart.de">info@doggybagtogo.de</a></p>
-    <p><strong>#DoggyBagToGo</strong></p>
+  <!-- ABOUT SECTION -->
+  <section class="section" id="about">
+    <div class="section-part">
+      <div>
+        <h2>"Tritt der Bewegung bei – Dein erster Schritt zu mehr Nachhaltigkeit und einem besseren Morgen!"</h2>
+        <button class="contact-btn" onclick="contactWhatsApp()">Contact</button>
+      </div>
+    </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 DoggyBag2Go – HFT Stuttgart</p>
+    <div class="footer-info">
+      <p>
+        Jeden Tag werden weltweit Millionen Tonnen noch genießbarer Lebensmittel weggeworfen. 
+        Allein in Deutschland landen jährlich etwa 12 Millionen Tonnen Essen im Müll, während Millionen Menschen hungern. 
+        Etwa 811 Millionen Menschen weltweit leiden an chronischem Hunger – das entspricht jeder neunten Person. 
+        Gleichzeitig könnten die Nahrungsmittel, die nur in Europa und Nordamerika verschwendet werden, alle Hungernden der Welt mehrfach ernähren. 
+        Die Verschwendung belastet auch unsere Umwelt massiv durch unnötigen Wasserverbrauch und Treibhausgasemissionen. 
+        Es liegt an uns allen, bewusster zu konsumieren, Reste zu verwerten und nachhaltige Entscheidungen zu treffen. 
+        Jede kleine Handlung zählt und hilft, die globale Ungleichheit zu verringern. 
+        Gemeinsam machen wir die Welt ein wenig gerechter.
+      </p>
+      <div class="bottom">© 2024 your_company. Alle Rechte vorbehalten.</div>
+    </div>
   </footer>
-
 </body>
 </html>
 
+
+ 
